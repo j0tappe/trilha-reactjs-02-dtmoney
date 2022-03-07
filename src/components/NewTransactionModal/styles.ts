@@ -27,11 +27,8 @@ input {
     & + input {
         margin-top: 1rem;
     }
-}
-
-
-
-button[type="submit"] {
+} 
+    button[type="submit"] {
         width: 100%;
         padding: 0 1.5rem;
         height: 4rem;
@@ -50,8 +47,9 @@ button[type="submit"] {
         }
 
     }
-    
+
 `
+
 
 export const TransactionTypeContainer = styled.div`
     margin: 1rem 0;
@@ -59,29 +57,36 @@ export const TransactionTypeContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 
-    button {
-        height: 4rem;
-        border: 1px solid #d7d7d7;
-        border-radius: 0.25rem;
-        background: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+`
+interface RadioBoxProps {
+    isActive: boolean;
+}
 
-        transition: border-color 0.2s;
+export const RadioBox = styled.button<RadioBoxProps>`
 
-        &:hover {
-            //border-color: #aaa
-            border-color: ${darken(0.1, '#d7d7d7')}
-        }
+    height: 4rem;
+    border: 1px solid #d7d7d7;
+    border-radius: 0.25rem;
+
+    background: ${(props) => props.isActive ? '#ccc' : 'transparent'};
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: border-color 0.2s;
+
+    &:hover {
+        //border-color: #aaa
+        border-color: ${darken(0.1, '#d7d7d7')}
     }
+
 
     img {
         width: 20px;
         height: 20px;
     }
-
-    
+   
 
     span {
         display: inline-block;
