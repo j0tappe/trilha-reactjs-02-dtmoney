@@ -76,8 +76,8 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionPr
                     </RadioBox>
                     <RadioBox
                         type="button"
-                        onClick={() => { setType('witdraw') }}
-                        isActive={type === 'witdraw'}
+                        onClick={() => { setType('withdraw') }}
+                        isActive={type === 'withdraw'}
                         activeColor="red"
                     >
                         <img src={outcomeImg} alt="Saída" />
